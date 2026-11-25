@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>EVERYONE</title>
+<meta name="theme-color" content="#174C4F">
+<meta name="description" content="EVERYONE – Digital. Einfach. Individuell. Für alle.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="EVERYONE">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+:root{--fs:1;--b:1;--g:1;--lh:1.4;--ls:0;--fw:400;--bg:#F7F5EF;--fg:#263238;--pri:#174C4F;--card:#fff;--sm:#4A5A60;--bd:#D5D1C4;--yl:#F2C14E;--red:#B54747;--ink:#101A1C;--wm:#174C4F;--lg:#3A9E85;--tl:#1F6F6B;--ff:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:calc(18px*var(--fs))}
+[data-m=dark]{--bg:#192225;--fg:#F7F5EF;--pri:#2A7A7E;--card:#263238;--sm:#B8C4C8;--bd:#3C4B51;--wm:#F7F5EF;--lg:#7FD1B5;--tl:#7FD1B5}
+[data-c="1"][data-m=light],[data-c="2"][data-m=light]{--bg:#fff;--fg:#000;--card:#fff;--bd:#000;--pri:#0B3A3C;--wm:#000;--lg:#0B5A46;--tl:#0B3A3C}
+[data-c="1"][data-m=dark],[data-c="2"][data-m=dark]{--bg:#000;--fg:#fff;--card:#000;--bd:#fff;--pri:#1F6A6E;--wm:#fff;--lg:#9DE8CF;--tl:#fff}
+[data-c="1"],[data-c="2"]{--sm:var(--fg)}
+[data-c="2"] .b,[data-c="2"] .q,[data-c="2"] .pv{border-width:5px}
+[data-c="2"] small{font-weight:700}
+[data-ff=h]{--ff:"Atkinson Hyperlegible",Verdana,Tahoma,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--ff);font-weight:var(--fw);line-height:var(--lh);letter-spacing:var(--ls)}
+main{max-width:30rem;margin:auto;padding:env(safe-area-inset-top,0px) 1rem 7.5rem}
+h1{font-size:2rem;margin:1rem 0}h3{margin:.4rem 0}
+.sm,small{color:var(--sm)}
+.b{display:flex;align-items:center;gap:1rem;width:100%;min-height:calc(4rem*var(--b));margin:calc(.6rem*var(--g)) 0;padding:.6rem 1rem;border:3px solid var(--bd);border-radius:1rem;font:inherit;font-weight:700;text-align:left;cursor:pointer;background:var(--card);color:var(--fg);text-decoration:none}
+:focus-visible{outline:4px solid var(--fg);outline-offset:2px;box-shadow:0 0 0 7px var(--yl)}
+[data-f="1"] :focus-visible{outline-width:8px;box-shadow:0 0 0 12px var(--yl)}
+.b:active{transform:scale(.97)}.b{transition:transform .15s}
+[data-a="0"] *{transition:none!important;animation:none!important}
+.b i,.q h2 i{font-style:normal;min-width:3rem;height:3rem;padding:0 .3rem;border-radius:.8rem;display:grid;place-items:center;flex:none;font-size:1.6rem}
+
+.setting-icon{display:block;width:2.25rem;height:2.25rem;color:currentColor}
+.hub .b i,.hd i,.intro-setting-icon{font-size:0}
+.hub .b i{background:transparent!important;color:var(--on)!important;width:3.8rem;height:3.8rem;border-radius:0}
+.hub .b i .setting-icon,.hd i .setting-icon{color:currentColor;width:2.7rem;height:2.7rem}
+.hd i{background:transparent!important;color:var(--on)!important;width:4rem;height:4rem;border-radius:0}
+.intro-setting-icon{font-style:normal;width:3.2rem;height:3.2rem;border-radius:.9rem;display:grid;place-items:center;background:var(--ac);color:var(--on)}
+.intro-setting-icon .setting-icon{color:currentColor;width:2rem;height:2rem}
+
+.gr i{filter:grayscale(1)}.ni i{display:none}
+.b small{display:block;font-weight:400;font-size:.8rem}
+.p{background:var(--pri);color:#fff;border-color:var(--pri);justify-content:center;text-align:center}
+.u{background:var(--red);color:#fff;border-color:var(--red);justify-content:center;text-align:center}
+.u small{color:#fff}
+.a{background:var(--yl);color:var(--ink);border-color:var(--ink)}
+.a small{color:var(--ink)}.a i{background:var(--ink);color:#fff}
+.hdr{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;gap:.6rem;background:var(--bg);padding:.5rem 0}
+.hdr .b{width:auto;min-height:calc(3rem*var(--b));margin:0}
+.ht{font-weight:800;color:var(--wm);letter-spacing:.08em}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:calc(.7rem*var(--g));margin:1rem 0}
+.grid2 .b{flex-direction:column;justify-content:center;text-align:center;margin:0;min-height:calc(7.5rem*var(--b))}
+[data-big] .grid2,[data-big] .hub{grid-template-columns:1fr}
+.big{font-size:4rem;text-align:center}
+.row{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:1rem 0}
+.row i{font-style:normal;width:3.2rem;height:3.2rem;border-radius:.9rem;display:grid;place-items:center;font-size:1.7rem;background:var(--ac);color:var(--on)}
+.hub{display:grid;grid-template-columns:1fr 1fr;gap:calc(.7rem*var(--g));margin:1rem 0}
+.hub .b{flex-direction:column;justify-content:center;text-align:center;gap:.3rem;margin:0;min-height:calc(10rem*var(--b));background:var(--ac);color:var(--on);border-color:var(--fg)}
+.hub .b:last-child{grid-column:1/-1}
+.hub .b i{background:#fff;color:var(--ink);width:3.4rem;height:3.4rem;border-radius:50%;font-size:1.9rem}
+.hub .b small{color:var(--on)}
+.prog{height:1rem;border:2px solid var(--fg);border-radius:1rem;overflow:hidden}.prog div{height:100%;background:var(--pri)}
+.hd{display:flex;align-items:center;gap:1rem;background:var(--ac);color:var(--on);border-radius:1.2rem;padding:1rem;margin:1rem 0}
+.hd small{color:var(--on)}
+.hd i{font-style:normal;background:#fff;color:var(--ink);width:4rem;height:4rem;border-radius:50%;display:grid;place-items:center;font-size:2.2rem;flex:none}
+.hd h1{margin:0;font-size:1.5rem}
+.q,.pv{background:var(--card);border:3px solid var(--bd);border-radius:1rem;padding:.1rem 1rem 1rem;margin:1rem 0}
+.q{border-left:.5rem solid var(--ac)}
+.pv{padding:1rem;border-style:dashed;border-color:var(--fg)}
+.q h2{display:flex;align-items:center;gap:.7rem;font-size:1.1rem;margin:1rem 0 .4rem}
+.q h2 i,.o .b i{background:var(--ac);color:var(--on)}
+.o{display:grid;gap:.4rem}.o .b{background:var(--bg);color:var(--fg);border-color:var(--fg)}
+.o .b i{font-size:1.3rem;font-weight:800}
+.o .b[aria-pressed=true]{background:var(--yl);color:var(--ink);border-color:var(--ink)}
+.o .b[aria-pressed=true] small{color:var(--ink)}
+.o .b b{margin-left:auto;font-size:1.5rem}
+.sl{list-style:none;padding:0;margin:.4rem 0}.sl li{margin:.4rem 0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+textarea{width:100%;min-height:8rem;font:inherit;padding:.8rem;border-radius:1rem;border:3px solid var(--fg);background:var(--bg);color:var(--fg)}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--pri);display:grid;grid-template-columns:repeat(4,1fr);padding-bottom:env(safe-area-inset-bottom,0px);z-index:4}
+nav button{background:none;border:0;border-top:5px solid transparent;color:#fff;font:inherit;font-size:.7rem;font-weight:700;min-height:3.6rem;display:grid;place-items:center;padding:.3rem 0;hyphens:auto;overflow-wrap:anywhere}
+nav button[aria-current=page]{border-top-color:var(--yl);background:rgba(255,255,255,.18)}
+nav i{font-style:normal;display:grid;place-items:center}
+nav .ai{width:1.6rem;height:1.6rem}
+nav button[aria-current=page] .ai{color:var(--yl)}
+body.oh nav button{min-height:4.8rem}
+.sh p{max-width:20em;margin:1.4rem 0}
+[hidden]{display:none!important}
+h2{font-size:1.25rem;margin:1.4rem 0 .4rem}
+.lb{display:block;font-weight:700;margin:1rem 0 .4rem}
+.in{width:100%;font:inherit;padding:.8rem;border-radius:1rem;border:3px solid var(--fg);background:var(--bg);color:var(--fg);min-height:3.5rem}
+.cr{display:grid;grid-template-columns:1fr auto;gap:.5rem;align-items:center}
+.cr .b{margin:calc(.3rem*var(--g)) 0}.cr .b:last-child{width:auto;justify-content:center}
+.pad{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:.5rem 0}
+.pad .b{justify-content:center;font-size:1.6rem;margin:0;min-height:calc(4.5rem*var(--b))}
+.p small{color:#fff}
+.ai{width:2rem;height:2rem;display:block}
+.b i.t2,.ti{color:#fff}
+.grid2 .b i.t2{width:4.4rem;height:4.4rem;border-radius:1.1rem}
+.grid2 .b i .ai{width:2.7rem;height:2.7rem}
+.ti{display:inline-grid;place-items:center;width:5rem;height:5rem;border-radius:1.2rem;font-style:normal}
+.ti .ai{width:3.2rem;height:3.2rem}
+.r1{display:flex;align-items:center;justify-content:center;gap:.6rem}
+.u .ai{width:2.2rem;height:2.2rem}
+.hdr .u .ai{width:1.6rem;height:1.6rem}
+.sos{flex-direction:column;gap:.15rem}
+.appv{position:relative}
+.appv>*:not(.bgart):not(.vh){position:relative;z-index:1}
+.bgart{position:absolute;left:-1rem;right:-1rem;top:0;height:max(50vh,16rem);opacity:.24;pointer-events:none;overflow:hidden;-webkit-mask-image:linear-gradient(#000 15%,transparent 100%);mask-image:linear-gradient(#000 15%,transparent 100%)}
+[data-m=dark] .bgart{opacity:.32}
+.gr .bgart{filter:grayscale(1)}
+[data-c="1"] .bgart,[data-c="2"] .bgart{display:none}
+#t{position:fixed;left:1rem;right:1rem;top:calc(.6rem + env(safe-area-inset-top,0px));max-width:28rem;margin:auto;z-index:5;background:var(--yl);color:var(--ink);font-weight:700;padding:1rem;border-radius:1rem;border:3px solid var(--ink)}
+input[type=range]{width:100%;height:3rem}
+.wm{display:inline-block;font-weight:800;color:var(--wm);letter-spacing:.03em;font-size:var(--wz,2.6rem);line-height:1.1}
+.wm svg{height:.78em;width:.71em;vertical-align:-.02em;margin:0 .02em}
+.tl{color:var(--tl);font-weight:600;margin:.4rem 0}
+.logo{text-align:center;margin:1.5rem 0}
+.emb{text-align:center;margin:.2rem auto 1rem}
+.emb svg{width:7rem;height:7rem}
+.et{font-size:1.7rem;font-weight:800;letter-spacing:.08em;color:var(--wm);line-height:1.1}
+.etl{font-size:.8rem;color:var(--tl);font-weight:600;margin-top:.3rem}
+#sp{position:fixed;inset:0;z-index:20;background:var(--bg);display:grid;place-items:center;text-align:center;transition:opacity .5s;pointer-events:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+</head><body>
+<div id="sp" aria-hidden="true"></div>
+<main id="v"></main>
+<div id="t" role="status" hidden></div>
+<nav id="n" aria-label="Hauptnavigation" hidden></nav>
+<script>
+const A=[["📞","Telefon","Anrufen und Kontakte","#2F7F83"],["💬","Nachrichten","Texte schreiben und lesen","#6F9E9A"],["📷","Kamera & Fotos","Fotos machen und ansehen","#E9A920"],["🌐","Internet","Webseiten öffnen","#174C4F"],["✉️","E-Mail","Post lesen und senden","#8A5A1E"],["📍","Karten & Wege","Den Weg finden","#55646B"]];
+const EZ=["Anrufen","Schreiben","Fotos","Internet","Post","Weg finden"];
+const GL={Barrierefreiheit:"Die App ist für möglichst alle Menschen gut nutzbar.",Notruf:"Die Nummer 112 ruft Hilfe: Polizei, Feuerwehr oder Rettung."};
+const TB=[[0,"Start","home"],[1,"Funktionen","fn"],[2,"Hilfe","help"],[3,"Einstellungen","opt"]];
+const SOON={e3:[0,1],c4:[3,4],f1:[2,4],b3:[3],d3:[2]};
+// Symbole der Startseite (Linien, weiß auf farbigen Kacheln)
+const IP=[
+`<path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>`,
+`<path d="M4 5.5h16a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-9L6.5 21v-3.5H4A1.5 1.5 0 0 1 2.5 16V7A1.5 1.5 0 0 1 4 5.5z"/><circle cx="8" cy="11.3" r="1.1" fill="currentColor" stroke="none"/><circle cx="12" cy="11.3" r="1.1" fill="currentColor" stroke="none"/><circle cx="16" cy="11.3" r="1.1" fill="currentColor" stroke="none"/>`,
+`<path d="M3.5 8h3l1.6-2.5h7.8L17.5 8h3a1 1 0 0 1 1 1v9.5a1 1 0 0 1-1 1h-17a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.8"/>`,
+`<circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c3.2 3.2 3.2 15.8 0 19M12 2.5c-3.2 3.2-3.2 15.8 0 19M4.2 7.2h15.6M4.2 16.8h15.6"/>`,
+`<rect x="2.5" y="5" width="19" height="14" rx="1.8"/><path d="M3 6.5l9 7 9-7M3 18l6.5-6M21 18l-6.5-6"/>`,
+`<path d="M12 21.5s-7-6.2-7-11.5a7 7 0 0 1 14 0c0 5.3-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.6"/>`];
+const ai=i=>`<svg class="ai" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="${i?"none":"currentColor"}" stroke="${i?"currentColor":"none"}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${IP[i]}</svg>`;
+const accI=`<svg class="ai" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.2" r="2"/><path d="M4.5 8.5c4.9 1.4 10.1 1.4 15 0M12 9v5.5M12 14.5l-3.4 6M12 14.5l3.4 6"/></svg>`;
+const sosI=`<svg class="ai" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><text x="12" y="15.2" text-anchor="middle" font-size="8.6" font-weight="800" fill="currentColor" font-family="Arial,Helvetica,sans-serif">SOS</text></svg>`;
+// Symbole der unteren Leiste (gleicher Linienstil wie die App-Symbole)
+const TI=[
+`<path d="M3.5 11.5L12 4l8.5 7.5"/><path d="M6 10v9.5h4.5V14h3v5.5H18V10"/>`,
+`<rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/>`,
+`<circle cx="12" cy="12" r="9.5"/><path d="M9.2 9.3a2.9 2.9 0 1 1 4.4 2.5c-1 .6-1.6 1.2-1.6 2.4"/><circle cx="12" cy="17.2" r=".7" fill="currentColor" stroke="none"/>`,
+`<circle cx="12" cy="4.2" r="2"/><path d="M4.5 8.5c4.9 1.4 10.1 1.4 15 0M12 9v5.5M12 14.5l-3.4 6M12 14.5l3.4 6"/>`];
+const tabI=i=>`<svg class="ai" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${TI[i]}</svg>`;
+// Verblasste Hintergrundabbildungen für die App-Ansichten
+const G=(i,x,y,k)=>`<g transform="translate(${x} ${y}) scale(${k})" stroke-width="${3/k}">${IP[i]}</g>`;
+const ART=[
+G(0,20,30,9)+[0,1,2,3].flatMap(r=>[0,1,2].map(c=>`<circle cx="${275+c*50}" cy="${40+r*52}" r="16"/>`)).join(""),
+`<path d="M30 40h170a14 14 0 0 1 14 14v70a14 14 0 0 1-14 14h-90l-40 32v-32H30a14 14 0 0 1-14-14V54a14 14 0 0 1 14-14z"/><circle cx="70" cy="90" r="7"/><circle cx="115" cy="90" r="7"/><circle cx="160" cy="90" r="7"/><path d="M250 105h120a14 14 0 0 1 14 14v50a14 14 0 0 1-14 14h-14v30l-36-30h-70a14 14 0 0 1-14-14v-50a14 14 0 0 1 14-14z"/><path d="M270 135h80M270 158h50"/><path d="M50 215h110a14 14 0 0 1 14 14v26a14 14 0 0 1-14 14h-50l-30 24v-24H50a14 14 0 0 1-14-14v-26a14 14 0 0 1 14-14z"/>`,
+G(2,85,35,9)+`<path d="M24 60V30h34M376 60V30h-34M24 290v-30h34M376 290v-30h-34"/><rect x="305" y="205" width="70" height="86" rx="6" transform="rotate(8 340 248)"/><circle cx="55" cy="215" r="26"/>`,
+G(3,165,15,10)+`<rect x="20" y="55" width="170" height="125" rx="12"/><path d="M20 88h170M40 125h110M40 150h80"/><circle cx="42" cy="72" r="5"/><circle cx="62" cy="72" r="5"/><path d="M130 150v52l14-12 12 26 12-6-12-26 18-2z"/>`,
+G(4,60,35,11)+`<g transform="translate(285 195) rotate(10)" stroke-width=".75"><g transform="scale(4)">${IP[4]}</g></g>`,
+`<path d="M-10 205C70 160 130 235 215 180S340 120 410 150" stroke-width="16"/><path d="M-10 70L410 40M-10 250L410 285M60 -10L95 330M205 -10L170 330M330 -10L360 330M-10 150L410 190"/><rect x="105" y="85" width="55" height="42" rx="6"/><rect x="225" y="62" width="70" height="50" rx="6"/><rect x="215" y="215" width="80" height="45" rx="6"/><ellipse cx="55" cy="108" rx="34" ry="22"/>`+G(5,120,15,8)];
+const art=i=>`<svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMin slice" width="100%" height="100%" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${ART[i]}</svg>`;
+
+// Einheitliche Linienicons für die sieben Einstellungsbereiche
+const SI=[
+`<path d="M18 72L37 25h8l19 47M26 54h30"/><path d="M65 36h17M73.5 27.5v17"/><path d="M66 62c0-7 5-12 12-12s12 5 12 12-5 12-12 12-12-5-12-12z"/>`,
+`<path d="M50 17a33 33 0 1 0 0 66h5a8 8 0 0 0 0-16h-3a5 5 0 0 1 0-10h8a18 18 0 0 0 18-18C78 29 66 17 50 17z"/><circle cx="34" cy="42" r="4"/><circle cx="48" cy="31" r="4"/><circle cx="64" cy="39" r="4"/>`,
+`<path d="M27 52V36a7 7 0 0 1 14 0v13-22a7 7 0 0 1 14 0v22-17a7 7 0 0 1 14 0v20-10a7 7 0 0 1 14 0v22c0 15-10 25-25 25H49c-9 0-15-4-20-12L18 60a7 7 0 0 1 11-8l9 10"/>`,
+`<path d="M17 25h66v45H48L30 84V70H17z"/><path d="M32 42h36M32 55h27"/>`,
+`<path d="M12 50s14-25 38-25 38 25 38 25-14 25-38 25S12 50 12 50z"/><circle cx="50" cy="50" r="11"/>`,
+`<circle cx="50" cy="20" r="8"/><path d="M50 31v26M29 43l21-8 21 8M50 57L33 82M50 57l17 25"/><path d="M18 50a32 32 0 0 1 64 0"/>`,
+`<path d="M25 75l5-19 34-34a9 9 0 0 1 13 13L43 69z"/><path d="M57 31l12 12M25 75l18-6"/>`
+];
+const settingIcon=(i)=>`<svg class="setting-icon" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">${SI[i]}</g></svg>`;
+
+const Q=[
+["Schrift & Lesbarkeit","🔤","#174C4F","Passe Schriftgröße und Textdarstellung an.","#fff",[
+["a1","🔠 Wie groß soll die Schrift in der App sein?","s",["a Klein","A Mittel","A+ Groß","A++ Sehr groß"]],
+["a4","🅱️ Soll die Schrift fett dargestellt werden?","s",["Aa Normale Schrift","B Fette Schrift"]],
+["a2","✏️ Welche Schriftart bevorzugst du?","s",["Aa Standardschrift","👓 Besonders gut lesbare Schrift (z. B. Atkinson Hyperlegible)","🤷 Keine Präferenz"]],
+["a3","📄 Wie sollen Texte dargestellt werden?","m",["☰ Normaler Zeilenabstand","↕️ Vergrößerter Zeilenabstand","↔️ Größerer Abstand zwischen den Buchstaben","✂️ Kürzere und übersichtlichere Textabschnitte"]]]],
+["Farben & Kontraste","🎨","#6F9E9A","Wähle deine bevorzugte Darstellung.","#101A1C",[
+["b1","🌗 Welchen Darstellungsmodus bevorzugst du?","s",["☀️ Heller Modus","🌙 Dunkler Modus","📱 Automatische Anpassung an mein Gerät"]],
+["b2","🔆 Welchen Kontrast empfindest du als angenehm?","s",["◐ Standardkontrast","◑ Erhöhter Kontrast","● Besonders hoher Kontrast"]],
+["b3","🎨 Wie sollen Farben in der App eingesetzt werden?","m",["🏷️ Farben mit zusätzlichen Symbolen und Beschriftungen kombinieren","⚪ Möglichst wenige Farben verwenden","🌈 Eine farbenfrohe Gestaltung bevorzugen","🖌️ Farbgestaltung individuell anpassen können"]]]],
+["Bedienung & Navigation","👆","#F2C14E","Gestalte die Bedienung einfacher.","#101A1C",[
+["c1","🔘 Wie groß sollen die Schaltflächen dargestellt werden?","s",["🔘 Normal","⭕ Groß","🟢 Sehr groß"]],
+["c2","↔️ Wie viel Abstand zwischen den Schaltflächen ist für dich angenehm?","s",["▫️ Normaler Abstand","◽ Größerer Abstand","⬜ Besonders viel Abstand"]],
+["c3","🧭 Welche Art der Navigation bevorzugst du?","m",["⚡ Kompakte Navigation mit wenigen Schritten","⬅️ Besonders einfache Navigation mit klaren Zurück- und Weiter-Buttons","🚫 Möglichst wenige Wischbewegungen und Gesten","🤷 Keine Präferenz"]],
+["c4","✋ Wie möchtest du die App bedienen können?","m",["👆 Über normale Touch-Eingaben","🤚 Möglichst einfach mit einer Hand","⌨️ Über eine Tastatur","🎙️ Über Sprachsteuerung","🕹️ Auch über alternative Eingabemöglichkeiten"]],
+["c5","🔲 Wie deutlich soll die Markierung bei Tastaturbedienung sein?","s",["▫️ Standard","🔳 Besonders deutlich"]]]],
+["Sprache & Verständlichkeit","💬","#8A5A1E","Bestimme, wie Informationen vermittelt werden.","#fff",[
+["d1","📝 Wie sollen Texte formuliert sein?","s",["📖 Standardsprache","💡 Einfache und kurze Sprache","🧸 Besonders einfache Sprache mit kurzen Sätzen"]],
+["d2","ℹ️ Wie ausführlich sollen zusätzliche Erklärungen sein?","s",["📌 Nur die wichtigsten Informationen","❓ Zusätzliche Erklärungen bei schwierigen Begriffen","📚 Ausführliche Erklärungen und Beispiele"]],
+["d4","🔎 Sollen schwierige Begriffe direkt erklärt werden?","s",["🚫 Nein, nicht nötig","❓ Ja, mit kurzer Erklärung"]],
+["d3","🖼️ Wie sollen Informationen vermittelt werden?","s",["🔤 Hauptsächlich durch Text","🔣 Durch Text und Symbole","🎞️ Durch Text, Symbole und visuelle Erklärungen"]]]],
+["Bewegung, Audio & Wahrnehmung","🔔","#263238","Passe Animationen und Hinweise an.","#fff",[
+["e1","🎬 Wie sollen Animationen dargestellt werden?","s",["✨ Normale Animationen","🌫️ Dezente Animationen","🐢 Möglichst wenig Bewegung","⏸️ Ganz ohne Animationen"]],
+["e2","🔔 Wie möchtest du akustische Hinweise erhalten?","s",["🔊 Akustische Hinweise","👀 Visuelle Hinweise statt Tonsignale","🔔 Akustische und visuelle Hinweise gleichzeitig","📳 Visuelle Hinweise und Vibration"]],
+["e3","📺 Wie möchtest du Videos und gesprochene Inhalte nutzen?","s",["📺 Untertitel immer anzeigen","🎚️ Untertitel bei Bedarf einschalten","🙉 Keine Untertitel notwendig"]],
+["e4","📢 Möchtest du dir Texte vorlesen lassen können?","s",["🗣️ Ja, jederzeit","🕒 Nur bei Bedarf","📖 Nein, ich lese lieber selbst"]]]],
+["Bedienhilfen & Unterstützung","🛠️","#D8C9A3","Entdecke zusätzliche Bedienmöglichkeiten.","#101A1C",[
+["f1","🧰 Welche zusätzlichen Bedienhilfen möchtest du nutzen können?","m",["🦮 Screenreader","🔍 Bildschirmlupe","🎙️ Sprachsteuerung","⌨️ Tastaturbedienung","🔌 Externe Schalter","📢 Vorlesefunktion","🚫 Keine zusätzliche Bedienhilfe"]],
+["f2","⏱️ Wie viel Zeit möchtest du für Aktionen innerhalb der App haben?","s",["🧘 Ohne Zeitdruck","⏰ Mit normalen Zeitvorgaben","🎛️ Zeitvorgaben individuell einstellen können"]],
+["f3","💡 Wie soll die App auf deine Aktionen reagieren?","m",["✅ Deutliche Rückmeldung nach jeder Aktion","❗ Rückmeldung nur bei wichtigen Aktionen","🛟 Zusätzliche Erklärungen bei Fehlern","🤫 Möglichst wenige zusätzliche Hinweise"]]]],
+["Individuelle Wünsche (optional)","✍️","#55646B","Trage weitere Wünsche ein.","#fff",[
+["g1","✍️ Gibt es noch etwas, das dir bei der Nutzung digitaler Anwendungen besonders wichtig ist?","t"]]]];
+const XL={f1:6,c3:3},XP={a3:[[0,1]],b3:[[1,2]]};
+let S={},V="intro",I=0,N=0,RS=0,TT,PV="home";
+const fd=()=>{try{return localStorage.getItem("everyone4-done")}catch(e){return null}};
+try{S=JSON.parse(localStorage.getItem("everyone4")||"{}");if(fd())V="home"}catch(e){}
+const $=id=>document.getElementById(id),g=(k,d)=>S[k]===undefined?d:S[k],has=(k,i)=>(S[k]||[]).includes(i);
+const sp=s=>{const i=s.indexOf(" ");return[s.slice(0,i),s.slice(i+1)]};
+const esc=s=>(s+"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const easy=(a,b)=>g("d1",0)>=1?b:a;
+const ex=t=>g("d4",0)?`<p class="sm">ℹ️ <b>${t}:</b> ${GL[t]}</p>`:"";
+const ans=i=>Q[i][5].filter(q=>{const v=S[q[0]];return v!==undefined&&v!==""&&!(Array.isArray(v)&&!v.length)});
+const ok=i=>ans(i).length>0;
+const gr=()=>{const h=new Date().getHours();return h<11?"Guten Morgen!":h<18?"Guten Tag!":"Guten Abend!"};
+const Y=(c,d)=>`<path d="M20 24L50 58L80 24M50 58V90" fill="none" stroke="${c}" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="26" r="9.5" fill="${d}"/>`;
+const ico=(k,z,sq)=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="${z}" height="${z}" role="img" aria-label="EVERYONE App-Symbol"><rect width="100" height="100" rx="${sq?0:23}" fill="${k?"#0B3C3D":"#F7F5EF"}"${sq||k?"":" stroke=\"#D5D1C4\" stroke-width=\"2\""}/><g transform="translate(50 50) scale(.72) translate(-50 -57)">${Y(k?"#7FD1B5":"#3A9E85","#F2C14E")}</g></svg>`;
+const wm=z=>`<span class="wm" role="img" aria-label="EVERYONE" style="--wz:${z}">EVER<svg viewBox="10 12 80 88" aria-hidden="true"><path d="M20 24L50 58L80 24M50 58V90" fill="none" style="stroke:var(--lg)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="26" r="9.5" style="fill:var(--yl)"/></svg>ONE</span>`;
+const arc=(a,b)=>{const p=t=>[60+50*Math.cos(t*Math.PI/180),60+50*Math.sin(t*Math.PI/180)].map(x=>x.toFixed(1));const s=p(a),e=p(b);return`M${s[0]} ${s[1]}A50 50 0 ${b-a>180?1:0} 1 ${e[0]} ${e[1]}`};
+const emb=()=>`<div class="emb" role="img" aria-label="EVERYONE – Digital. Einfach. Individuell. Für alle."><svg viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke-width="9" stroke-linecap="round"><path d="${arc(110,265)}" stroke="#2A8C8A"/><path d="${arc(285,355)}" style="stroke:var(--yl)"/><path d="${arc(10,95)}" style="stroke:var(--lg)"/></g><circle cx="42" cy="60" r="6.5" fill="#2A8C8A"/><path d="M29 84C29 72 34 67 42 67C50 67 55 72 55 84Z" fill="#2A8C8A"/><circle cx="78" cy="60" r="6.5" style="fill:var(--lg)"/><path d="M65 84C65 72 70 67 78 67C86 67 91 72 91 84Z" style="fill:var(--lg)"/><circle cx="60" cy="50" r="8.5" style="fill:var(--wm)"/><path d="M46 84C46 66 52 61 60 61C68 61 74 66 74 84Z" style="fill:var(--wm)"/></svg><div class="et">EVERYONE</div><div class="etl">Digital. Einfach. Individuell. Für alle.</div></div>`;
+const LK=(r,h)=>{const l=document.createElement("link");l.rel=r;l.href=h;document.head.appendChild(l)};
+function say(t){try{if(g("e4",2)==0||has("f1",5)){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="de-DE";speechSynthesis.speak(u)}}catch(e){}}
+function save(){try{localStorage.setItem("everyone4",JSON.stringify(S))}catch(e){}}
+function beep(){try{const c=new AudioContext(),o=c.createOscillator();o.connect(c.destination);o.frequency.value=880;o.start();o.stop(c.currentTime+.12)}catch(e){}}
+function fb(m,i){if(has("f3",3)||!(i||has("f3",0)))return;const t=$("t"),f=g("f2",1);t.textContent=m+(f==0?" (zum Schließen tippen)":"");t.hidden=false;t.onclick=()=>{t.hidden=true};if(S.e2===0||S.e2===2)beep();clearTimeout(TT);if(f)TT=setTimeout(()=>{t.hidden=true},(f==2?g("tm",8):4)*1000)}
+document.addEventListener("click",e=>{if(S.e2===3&&navigator.vibrate&&e.target.closest("button,a"))navigator.vibrate(40)});
+try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{if(g("b1",0)==2)R()})}catch(e){}
+function apply(){const r=document.documentElement,s=r.style,fs=[.85,1,1.25,1.5][g("a1",1)]*(has("f1",1)?1.2:1);
+s.setProperty("--fs",fs);r.toggleAttribute("data-big",fs>=1.4);
+s.setProperty("--fw",g("a4",0)?700:400);
+s.setProperty("--b",[1,1.3,1.6][g("c1",1)]);
+s.setProperty("--g",[1,1.6,2.2][g("c2",0)]);
+s.setProperty("--lh",has("a3",1)?1.9:1.4);
+s.setProperty("--ls",has("a3",2)?".08em":0);
+const m=g("b1",0);r.dataset.m=m==2?(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"):["light","dark"][m];
+r.dataset.c=g("b2",0);r.dataset.f=g("c5",0);
+r.dataset.a=g("e1",matchMedia("(prefers-reduced-motion: reduce)").matches?2:0)>=2?0:1;
+r.dataset.ff=g("a2",0)==1?"h":"";
+document.body.className=(has("b3",1)?"gr ":"")+(g("d3",1)==0?"ni ":"")+(has("c4",1)?"oh ":"")+(has("a3",3)?"sh":"");
+save()}
+function grp(a){return Q[a][5].map(q=>{const[qi,qt]=sp(q[1]);return`<div class="q"><h2><i>${qi}</i>${qt}</h2>`+(q[2]=="t"?`<textarea aria-label="Eigene Wünsche" oninput="S.g1=this.value;save()">${esc(g("g1",""))}</textarea>`:(q[2]=="m"?`<p class="sm">Du kannst mehrere Antworten auswählen.</p>`:"")+`<div class="o">`+q[3].map((o,i)=>{const on=q[2]=="m"?has(q[0],i):S[q[0]]===i,[oi,ot]=sp(o),so=(SOON[q[0]]||[]).includes(i);return`<button class="b" data-k="${q[0]}-${i}" aria-pressed="${on}" onclick="pick('${q[0]}',${i},'${q[2]}')"><i>${oi}</i><span>${ot}${so?"<small>⏳ bald verfügbar</small>":""}</span>${on?"<b>✓</b>":""}</button>`}).join("")+`</div>`+(q[0]=="f2"&&S.f2===2?`<h2><i>⏳</i>Anzeigedauer: <span id="tv">${g("tm",8)}</span> Sekunden</h2><input type="range" min="3" max="30" value="${g("tm",8)}" aria-label="Sekunden" oninput="S.tm=+this.value;save();$('tv').textContent=this.value">`:""))+`</div>`}).join("")}
+function sumL(i){return ans(i).map(q=>{const v=S[q[0]],qi=sp(q[1])[0];const t=q[2]=="t"?esc(v):(q[2]=="m"?v:[v]).map(x=>sp(q[3][x])[1]).join(", ");return`<li>${qi} ${t}</li>`}).join("")}
+function pick(k,i,t){if(t=="m"){let a=S[k]||[];const j=a.indexOf(i);if(j>=0)a.splice(j,1);else if(XL[k]==i)a=[i];else{a=a.filter(x=>x!=XL[k]);(XP[k]||[]).forEach(p=>{if(p.includes(i))a=a.filter(x=>!p.includes(x))});a.push(i)}S[k]=a}else S[k]=i;const y=scrollY;R();scrollTo(0,y);const e=document.querySelector(`[data-k="${k}-${i}"]`);if(e)e.focus({preventScroll:true});fb("✓ Auswahl gespeichert")}
+function foc(){const h=$("v").querySelector("h1");if(h){h.tabIndex=-1;h.focus({preventScroll:true})}}
+function go(v,i){stopCam();V=v;RS=0;if(i!==undefined)I=i;R();scrollTo(0,0);foc();say({home:"Startseite",fn:"Funktionen",help:"Hilfe",opt:"Barrierefreiheit und Darstellung"}[v]||"")}
+function tab(v){if(!fd()){try{localStorage.setItem("everyone4-done","1")}catch(e){}}go(v)}
+function back(){if(V=="app")go(PV);else go(V=="step"||V=="sum"?"opt":"home")}
+function app(i){stopCam();if(V!="app")PV=V;N=i;V="app";R();scrollTo(0,0);foc();say(i<0?"Notfall":A[i][1]);fb("Geöffnet: "+(i<0?"Notfall":A[i][1]),1)}
+function fin(){try{localStorage.setItem("everyone4-done","1")}catch(e){}go("home")}
+function rs(){if(RS){S={};D=dd();try{localStorage.removeItem(DK);localStorage.removeItem("everyone4-done")}catch(e){}go("intro")}else{RS=1;R()}}
+const DK="everyone4-data",PHR=["Ich komme gleich.","Bitte ruf mich an.","Alles gut bei mir.","Ich brauche Hilfe."];
+const NT=["Beim Antippen eines Kontakts startet ein echter Anruf.","Beim Senden öffnet sich deine Nachrichten-App. Dort tippst du auf Senden.","Fotos bleiben nur, solange die App offen ist. Nutze „Speichern“ oder „Teilen“.","Webseiten öffnen sich in einem neuen Fenster.","Deine E-Mail-App öffnet sich. EVERYONE speichert keine Zugangsdaten.","Karten und Routen öffnen sich im Browser. Den Standort nutzen wir nur mit deiner Erlaubnis."];
+const dd=()=>({c:[],p:[],f:[["Tagesschau","https://www.tagesschau.de"],["Wikipedia","https://de.wikipedia.org"],["Wetter (DWD)","https://www.dwd.de"]]});
+let D=dd(),DN="",PH=[],ST=null;
+try{const x=JSON.parse(localStorage.getItem(DK)||"null");if(x)D={...D,...x}}catch(e){}
+const er=t=>{const e=$("er");if(e)e.textContent=t};
+const sd=()=>{try{localStorage.setItem(DK,JSON.stringify(D))}catch(e){er("Speichern ist auf diesem Gerät nicht möglich.")}};
+const rr=()=>{const y=scrollY;R();scrollTo(0,y)};
+const num=s=>s.replace(/[^\d+*#]/g,"");
+function ext(u,b){const a=document.createElement("a");a.href=u;if(b){a.target="_blank";a.rel="noopener"}document.body.appendChild(a);a.click();a.remove()}
+function webU(v){v=v.trim();if(!v)return null;const dom=/^[^\s\/]+\.[^\s]{2,}$/.test(v),u=/^https?:\/\//i.test(v)?v:dom?"https://"+v:"https://duckduckgo.com/?q="+encodeURIComponent(v);try{const x=new URL(u);return/^https?:$/.test(x.protocol)?x.href:null}catch(e){return null}}
+function addC(){const n=$("cn").value.trim(),t=num($("ct").value);if(!n||t.replace(/\D/g,"").length<3)return er("Bitte Name und Telefonnummer eingeben.");D.c.push([n,t]);sd();rr();fb("✓ Kontakt gespeichert")}
+function delC(i){D.c.splice(i,1);sd();rr()}
+function dial(k){DN=k=="⌫"?DN.slice(0,-1):DN+k;$("dn").textContent=DN||"–";$("dc").href="tel:"+DN.replace(/#/g,"%23")}
+function pc(j){$("mt").value=D.c[j][1]}
+function ap(j){const t=$("mx");t.value=(t.value?t.value+" ":"")+PHR[j]}
+function sms(){const t=num($("mt").value),x=$("mx").value.trim();if(!t)return er("Bitte eine Telefonnummer eingeben.");if(!x)return er("Bitte eine Nachricht schreiben.");er("");ext("sms:"+t+"?&body="+encodeURIComponent(x))}
+async function startCam(){er("");try{ST=await navigator.mediaDevices.getUserMedia({video:{facingMode:"environment"},audio:false});const v=$("vd");v.srcObject=ST;["vd","cs","cx"].forEach(k=>$(k).hidden=false);$("c0").hidden=true}catch(e){er("Die Kamera konnte nicht gestartet werden (keine Erlaubnis oder keine Kamera). Du kannst stattdessen ein Foto aufnehmen oder auswählen.")}}
+function stopCam(){if(ST){ST.getTracks().forEach(t=>t.stop());ST=null}["vd","cs","cx"].forEach(k=>{const e=$(k);if(e)e.hidden=true});const c=$("c0");if(c)c.hidden=false}
+function snap(){const v=$("vd");if(!v.videoWidth)return er("Die Kamera ist noch nicht bereit.");const c=document.createElement("canvas");c.width=v.videoWidth;c.height=v.videoHeight;c.getContext("2d").drawImage(v,0,0);PH.unshift(c.toDataURL("image/jpeg",.85));rph();fb("📷 Foto gemacht",1)}
+function ph(e){const f=e.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{PH.unshift(r.result);rph()};r.readAsDataURL(f);e.value=""}
+function rph(){const e=$("pg");if(e)e.innerHTML=PH.length?PH.map((d,i)=>`<div class="q" style="--ac:#2F7F83"><img alt="Foto ${i+1}" src="${d}" style="width:100%;border-radius:.8rem;margin-top:1rem"><a class="b" download="EVERYONE-Foto-${i+1}.jpg" href="${d}">💾 Speichern</a><button class="b" onclick="sh(${i})">📤 Teilen</button><button class="b" onclick="dph(${i})">🗑 Löschen</button></div>`).join(""):`<p class="sm">Noch keine Fotos.</p>`}
+function dph(i){PH.splice(i,1);rph()}
+async function sh(i){try{const b=await(await fetch(PH[i])).blob(),f=new File([b],"foto.jpg",{type:b.type});if(navigator.canShare&&navigator.canShare({files:[f]}))await navigator.share({files:[f]});else er("Teilen geht auf diesem Gerät nicht. Nutze „Speichern“.")}catch(e){}}
+function openU(){const u=webU($("u").value);if(!u)return er("Bitte eine Webadresse oder einen Suchbegriff eingeben.");er("");ext(u,1)}
+function addF(){const r=$("u").value.trim();const u=/^https?:\/\//i.test(r)||/^[^\s\/]+\.[^\s]{2,}$/.test(r)?webU(r):null;if(!u)return er("Bitte eine Webadresse eingeben, zum Beispiel tagesschau.de");D.f.push([new URL(u).hostname.replace(/^www\./,""),u]);sd();rr();fb("⭐ Favorit gespeichert")}
+function openF(j){ext(D.f[j][1],1)}
+function delF(j){D.f.splice(j,1);sd();rr()}
+function mail(){const to=$("et").value.trim();if(!/^[^\s@?&#]+@[^\s@?&#]+\.[^\s@?&#]{2,}$/.test(to))return er("Bitte eine gültige E-Mail-Adresse eingeben.");er("");ext("mailto:"+to+"?subject="+encodeURIComponent($("es").value)+"&body="+encodeURIComponent($("em").value))}
+function mapQ(r){const q=$("mq").value.trim();if(!q)return er("Bitte einen Ort oder eine Adresse eingeben.");er("");ext(r?"https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(q):"https://www.openstreetmap.org/search?query="+encodeURIComponent(q),1)}
+function loc(){if(!navigator.geolocation)return er("Dein Gerät kann den Standort hier nicht bestimmen.");navigator.geolocation.getCurrentPosition(p=>{const a=p.coords.latitude,b=p.coords.longitude;ext(`https://www.openstreetmap.org/?mlat=${a}&mlon=${b}#map=17/${a}/${b}`,1)},()=>er("Der Standort ist nicht verfügbar. Bitte erlaube den Standort in den Einstellungen deines Geräts."),{timeout:10000})}
+function pl(j){ext("https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(D.p[j][1]),1)}
+function addP(){const n=$("pn").value.trim(),a=$("pa").value.trim();if(!n||!a)return er("Bitte Name und Adresse eingeben.");D.p.push([n,a]);sd();rr();fb("✓ Ort gespeichert")}
+function delP(j){D.p.splice(j,1);sd();rr()}
+function body(i){const L=(k,r)=>r.length?r.join(""):`<p class="sm">${k}</p>`;
+if(i==0)return`<h2>Meine Kontakte</h2>`+L("Noch keine Kontakte. Füge unten deinen ersten Kontakt hinzu.",D.c.map((c,j)=>`<div class="cr"><a class="b p" href="tel:${num(c[1])}"><span>📞 ${esc(c[0])}<small>${esc(c[1])}</small></span></a><button class="b" aria-label="${esc(c[0])} löschen" onclick="delC(${j})">🗑</button></div>`))+`<h2>Nummer wählen</h2><div class="pv" id="dn" role="status" style="font-size:1.6rem;font-weight:800;text-align:center">${DN||"–"}</div><div class="pad">${"123456789*0#".split("").map(k=>`<button class="b" onclick="dial('${k}')">${k}</button>`).join("")}</div><div class="cr"><a id="dc" class="b p" href="tel:${DN.replace(/#/g,"%23")}">📞 Anrufen</a><button class="b" aria-label="Letzte Ziffer löschen" onclick="dial('⌫')">⌫</button></div><h2>Kontakt hinzufügen</h2><label class="lb" for="cn">Name</label><input id="cn" class="in" autocomplete="off"><label class="lb" for="ct">Telefonnummer</label><input id="ct" class="in" type="tel" autocomplete="off"><button class="b p" onclick="addC()">➕ Kontakt speichern</button>`;
+if(i==1)return`<label class="lb" for="mt">An (Telefonnummer)</label><input id="mt" class="in" type="tel" autocomplete="off">`+(D.c.length?`<p class="sm">Oder wähle einen Kontakt:</p><div class="o">${D.c.map((c,j)=>`<button class="b" onclick="pc(${j})">👤 ${esc(c[0])}</button>`).join("")}</div>`:"")+`<label class="lb" for="mx">Nachricht</label><textarea id="mx"></textarea><p class="sm">Schnelle Sätze:</p><div class="o">${PHR.map((p,j)=>`<button class="b" onclick="ap(${j})">💬 ${p}</button>`).join("")}</div><button class="b p" onclick="sms()">💬 Nachricht senden</button>`;
+if(i==2)return`<button id="c0" class="b p" onclick="startCam()">📷 Kamera starten</button><video id="vd" playsinline autoplay muted hidden style="width:100%;border-radius:1rem;background:#000"></video><button id="cs" class="b p" hidden onclick="snap()">⭕ Foto machen</button><button id="cx" class="b" hidden onclick="stopCam()">✖ Kamera beenden</button><button class="b" onclick="$('fc').click()">📸 Foto mit Geräte-Kamera aufnehmen</button><input id="fc" class="vh" type="file" accept="image/*" capture="environment" onchange="ph(this)" tabindex="-1" aria-label="Foto aufnehmen"><button class="b" onclick="$('fg').click()">🖼️ Foto aus Galerie wählen</button><input id="fg" class="vh" type="file" accept="image/*" onchange="ph(this)" tabindex="-1" aria-label="Foto wählen"><h2>Meine Fotos</h2><div id="pg"></div>`;
+if(i==3)return`<label class="lb" for="u">Webadresse oder Suchbegriff</label><input id="u" class="in" autocomplete="off" autocapitalize="off" spellcheck="false"><button class="b p" onclick="openU()">🔎 Öffnen</button><button class="b" onclick="addF()">⭐ Als Favorit speichern</button><h2>Meine Favoriten</h2>`+L("Noch keine Favoriten.",D.f.map((f,j)=>`<div class="cr"><button class="b" onclick="openF(${j})"><span>🌐 ${esc(f[0])}<small>${esc(f[1])}</small></span></button><button class="b" aria-label="${esc(f[0])} entfernen" onclick="delF(${j})">🗑</button></div>`));
+if(i==4)return`<label class="lb" for="et">An (E-Mail-Adresse)</label><input id="et" class="in" type="email" autocomplete="off"><label class="lb" for="es">Betreff</label><input id="es" class="in"><label class="lb" for="em">Nachricht</label><textarea id="em"></textarea><button class="b p" onclick="mail()">✉️ E-Mail erstellen</button>`;
+return`<label class="lb" for="mq">Ort oder Adresse</label><input id="mq" class="in" autocomplete="off"><button class="b p" onclick="mapQ(0)">🔎 Auf der Karte zeigen</button><button class="b p" onclick="mapQ(1)">🧭 Route dorthin</button><button class="b" onclick="loc()">📍 Wo bin ich?</button><h2>Meine Orte</h2>`+L("Noch keine Orte. Speichere unten zum Beispiel „Zuhause“.",D.p.map((p,j)=>`<div class="cr"><button class="b p" onclick="pl(${j})"><span>🧭 ${esc(p[0])}<small>${esc(p[1])}</small></span></button><button class="b" aria-label="${esc(p[0])} löschen" onclick="delP(${j})">🗑</button></div>`))+`<h2>Ort speichern</h2><label class="lb" for="pn">Name (z. B. Zuhause)</label><input id="pn" class="in"><label class="lb" for="pa">Adresse</label><input id="pa" class="in"><button class="b p" onclick="addP()">➕ Ort speichern</button>`}
+const hdr=(bk,ne)=>`<div class="hdr">${bk?`<button class="b p" onclick="back()">← ${V=="app"?"Zurück":"Übersicht"}</button>`:`<span class="ht">EVERYONE</span>`}${ne?"":`<button class="b u" onclick="app(-1)"><span class="r1">${sosI}Notfall</span></button>`}</div>`;
+const fcard=(a,i)=>`<button class="b" onclick="app(${i})"><i class="t2" style="background:${a[3]}">${ai(i)}</i><span>${a[1]}${g("d2",1)?`<small>${easy(a[2],EZ[i])}</small>`:""}</span></button>`;
+function R(){apply();let h="";$("n").hidden=V=="intro";
+const ti=V=="app"?(N<0?0:1):{home:0,fn:1,help:2,opt:3,step:3,sum:3}[V];
+$("n").innerHTML=TB.map((t,i)=>`<button${i==ti?' aria-current="page"':""} onclick="tab('${t[2]}')"><i>${tabI(t[0])}</i>${t[1]}</button>`).join("");
+if(V=="intro")h=`<div class="logo">${wm("3rem")}<p class="tl">Digital. Einfach. Individuell. Für alle.</p></div><h1>Willkommen!</h1><div class="row">${Q.map((q,i)=>`<i class="intro-setting-icon" style="--ac:${q[2]};--on:${q[4]}">${settingIcon(i)}</i>`).join("")}</div><p>Jeder Mensch ist anders. Deshalb sollte sich auch deine App an dich anpassen.</p><p>${easy("Wähle aus, wie du digitale Inhalte am liebsten nutzt. Du kannst jeden Bereich einzeln überspringen und deine Einstellungen jederzeit ändern.","Du kannst alles überspringen. Du kannst alles später ändern.")}</p><button class="b p" onclick="go('opt')">▶ Fragebogen starten</button><button class="b" onclick="fin()">⏭ Alles überspringen</button>`;
+else if(V=="home")h=`${emb()}<h1>${gr()}</h1><p>Was möchtest du tun?</p><button class="b a" onclick="go('opt')"><i>${accI}</i><span>Barrierefreiheit & Darstellung<small>App anpassen</small></span></button><button class="b u sos" onclick="app(-1)"><span class="r1">${sosI}Notfall</span><small>Hilfe im Notfall · 112</small></button><div class="grid2">${A.map((a,i)=>`<button class="b" onclick="app(${i})"><i class="t2" style="background:${a[3]}">${ai(i)}</i><span>${a[1]}</span></button>`).join("")}</div><p class="sm">${easy("Du kannst deine Einstellungen jederzeit ändern.","Du kannst alles später ändern.")}</p>${ex("Barrierefreiheit")}`;
+else if(V=="fn")h=`${hdr(0)}<h1>Funktionen</h1><p class="sm">${easy("Diese Bereiche öffnen Apps und Seiten auf deinem Gerät.","Das öffnet etwas auf deinem Handy.")}</p>${A.map(fcard).join("")}`;
+else if(V=="help")h=`${hdr(0)}<h1>Hilfe</h1><div style="--ac:#2F7F83;--on:#fff">${[["👆","Tippe auf eine große Taste, um eine Funktion zu öffnen."],["↩️","Mit „Zurück“ gehst du einen Schritt zurück."],["🧭","Unten findest du immer: Start, Funktionen, Hilfe und Einstellungen."],["🚨","Im Notfall tippst du auf „Notfall“. Dann kannst du die 112 anrufen."]].map(x=>`<div class="q"><h2><i>${x[0]}</i>${x[1]}</h2></div>`).join("")}</div>${ex("Notruf")}<button class="b a" onclick="go('opt')"><i>${accI}</i><span>App anpassen<small>Schrift, Farben, Größe</small></span></button>`;
+else if(V=="opt"){const n=Q.filter((q,i)=>ok(i)).length;h=`${hdr(0)}<h1>Barrierefreiheit & Darstellung</h1><p>${easy("Wähle einen Bereich aus. Du musst nicht alle ausfüllen. Du kannst deine Einstellungen jederzeit ändern.","Tippe auf einen Bereich. Du musst nicht alles ausfüllen.")}</p><div class="prog" role="img" aria-label="${n} von 7 Bereichen bearbeitet"><div style="width:${n/7*100}%"></div></div><p><b>${n} von 7 Bereichen bearbeitet</b></p><div class="hub">`+Q.map((q,i)=>`<button class="b" style="--ac:${q[2]};--on:${q[4]}" onclick="go('step',${i})"><i>${settingIcon(i)}</i><span>${q[0]}</span><small>${q[3]}</small><small><b>${ok(i)?"✓ Bearbeitet":"○ Noch nicht bearbeitet"}</b></small></button>`).join("")+`</div><button class="b p" onclick="go('sum')">📋 Meine Einstellungen ansehen</button><div class="q" style="--ac:#55646B;--on:#fff"><h2><i>🔒</i>Datenschutz</h2><p>Deine Auswahl, Kontakte und Orte werden nur auf diesem Gerät gespeichert. Sie werden an niemanden gesendet.</p></div><button class="b ${RS?"u":""}" onclick="rs()">${RS?"❗ Wirklich alles löschen? Nochmal tippen":"↺ Einstellungen und Daten löschen"}</button>`}
+else if(V=="step")h=`${hdr(1)}<div style="--ac:${Q[I][2]};--on:${Q[I][4]}"><div class="hd"><i>${settingIcon(I)}</i><div><small>Bereich ${String(I+1).padStart(2,"0")}</small><h1>${Q[I][0]}</h1></div></div><div class="pv"><b>👁 Vorschau</b><h3>Beispiel: Nachrichten</h3><p>So sieht ein Text in deiner App aus. Probiere die Auswahl unten aus.</p><div class="b p" aria-hidden="true">✉️ Beispiel-Schaltfläche</div><p class="sm">⚠ Hinweise gibt es immer mit Symbol und Text.</p></div>${grp(I)}<button class="b p" onclick="go('opt')">✓ Fertig – zurück zur Übersicht</button></div>`;
+else if(V=="sum"){const l=Q.map((q,i)=>ok(i)?`<div class="q" style="--ac:${q[2]};--on:${q[4]}"><h2><i>${settingIcon(i)}</i>${q[0]}</h2><ul class="sl">${sumL(i)}</ul><button class="b" onclick="go('step',${i})">✏️ Ändern</button></div>`:"").join("");h=`${hdr(1)}<div class="row">${ico(0,72)}${ico(1,72)}</div><h1>${fd()?"Meine Einstellungen":"Vielen Dank!"}</h1><p>${easy("Deine persönlichen Einstellungen helfen uns dabei, EVERYONE angenehmer und zugänglicher zu gestalten. Du kannst deine Auswahl jederzeit ändern.","Danke! Die App passt sich jetzt an dich an. Du kannst alles später ändern.")}</p><h2>Diese Einstellungen sind aktiv</h2>${l||"<p>Du hast noch nichts geändert. Es gelten die Standard-Einstellungen.</p>"}<button class="b p" onclick="fin()">▶ Zur App</button>`}
+else h=N<0?`${hdr(1,1)}<div class="big"><i class="ti" style="background:var(--red)">${sosI}</i></div><h1>Notfall</h1><p>${easy("Beim Antippen startet ein echter Anruf an die 112.","Du rufst gleich die 112 an.")}</p><a class="b u" href="tel:112">📞 Jetzt 112 anrufen</a><button class="b" onclick="back()">Abbrechen</button><p class="sm">${easy("Bei Gefahr sofort den Notruf wählen.","Du bist in Gefahr? Ruf die 112 an.")}</p>${ex("Notruf")}`:`${hdr(1)}<div class="appv"><div class="bgart" aria-hidden="true" style="color:${A[N][3]}">${art(N)}</div><div class="big"><i class="ti" style="background:${A[N][3]}">${ai(N)}</i></div><h1>${A[N][1]}</h1><p id="er" class="sm" role="alert"></p>${body(N)}<p class="sm">ℹ️ ${NT[N]}</p></div>`;
+$("v").innerHTML=h;if(V=="app"&&N==2)rph()}
+R();
+$("sp").innerHTML=`<div>${ico(0,112)}<p style="margin:1rem 0 .2rem">${wm("2.2rem")}</p><p class="tl">Digital. Einfach. Individuell. Für alle.</p></div>`;
+setTimeout(()=>{$("sp").style.opacity=0;setTimeout(()=>$("sp").remove(),600)},1300);
+if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+</script></body></html>
